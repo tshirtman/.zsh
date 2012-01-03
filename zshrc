@@ -93,26 +93,12 @@ promptinit
 # VCS stuff
 autoload -Uz vcs_info
 
-zstyle ':vcs_info:*' enable git hg bzr svn git-svn hg-git
+zstyle ':vcs_info:*' enable git hg bzr svn
 zstyle ':vcs_info:*' get-revision true
 zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:*' formats "(%s)%i %u %b %m" # rev+changes branch misc
-#zstyle ':vcs_info:*' formats "[%i%u %b %m]" # rev+changes branch misc
-#zstyle ':vcs_info:hg*' actionformats "(%s|${red}%a${white})[%i%u %b %m]"
-#zstyle ':vcs_info:*' actionformats "${red}%a ${white}[%i%u ${blue}%b${white}%m]"
-zstyle ':vcs_info:*:*' get-bookmarks true
-#zstyle ':vcs_info:*:*' get-mq true
-zstyle ':vcs_info:*:*' get-unapplied true
-zstyle ':vcs_info:*:*' patch-format "mq(%g):%n/%c %p"
-zstyle ':vcs_info:*:*' nopatch-format "mq(%g):%n/%c %p"
-zstyle ':vcs_info:*:*' unstagedstr "${green}+${white}"
-#zstyle ':vcs_info:*:*' hgrevformat "%r" # only show local rev.
-zstyle ':vcs_info:*:*' branchformat "%F{green}%b%F{reset}" # only show branch
-#zstyle ':vcs_info:*' formats "(%s) %12.12i %c%u %b%m" # hash changes branch misc
-#zstyle ':vcs_info:*' formats "%c%u %b%m" # hash changes branch misc
-zstyle ':vcs_info:*' actionformats "(%s|${white}%a) %12.12i %c%u %b%m"
-zstyle ':vcs_info:*:*' stagedstr "${green}S${white}"
-#zstyle ':vcs_info:*:*' unstagedstr "${red}U${white}"
+zstyle ':vcs_info:*' formats "(%s)%6.6i %F{blue}%b%F{reset} %u%F{red}%c%F{reset} %m"
+zstyle ':vcs_info:*:*' unstagedstr "%F{green}!%F{reset}"
+zstyle ':vcs_info:*' actionformats "(%s|%F{red}%a%F{reset}) %6.6i %F{blue}%b%F{reset} %u%F{red}%c%F{reset} %m"
 
 ### Dynamically set hgrevformat based on if the local rev is available
 # We don't always know the local revision, e.g. if use-simple is set
@@ -169,6 +155,24 @@ function +vi-git-stash() {
         hook_com[misc]+=" (${stashes} stashed)"
     fi
 }
+
+### Display the existence of files not yet known to VCS
+
+### git: Show marker (T) if there are untracked files in repository
+# Make sure you have added staged to your 'formats':  %c
+zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
+
+function +vi-git-untracked(){
+    if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) == 'true' ]] && \
+        git status --porcelain | grep '??' &> /dev/null ; then
+        # This will show the marker if there are any untracked files in repo.
+        # If instead you want to show the marker only if there are untracked
+        # files in $PWD, use:
+        #[[ -n $(git ls-files --others --exclude-standard) ]] ; then
+        hook_com[staged]+='?'
+    fi
+}
+
 
 function set_prompt {
     prompt=""
