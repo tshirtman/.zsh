@@ -29,6 +29,6 @@ umask 022
 # De la couleur pour grep
 export GREP_OPTIONS='--color=auto'
 
-fpath=($fpath $HOME/.zsh/zsh-git/functions/)
-typeset -U fpath
+#fpath=($fpath $HOME/.zsh/zsh-git/functions/)
+#typeset -U fpath
 
