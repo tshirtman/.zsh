@@ -86,9 +86,9 @@ autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git hg bzr svn
 zstyle ':vcs_info:*' get-revision true
 zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:*' formats "(%s)%6.6i %F{blue}%b%F{reset} %u%F{red}%c%F{reset} %m"
+zstyle ':vcs_info:*' formats "(%s)%6.6i %F{cyan}%b%F{reset} %u%F{red}%c%F{reset} %m"
 zstyle ':vcs_info:*:*' unstagedstr "%F{green}!%F{reset}"
-zstyle ':vcs_info:*' actionformats "(%s|%F{red}%a%F{reset}) %6.6i %F{blue}%b%F{reset} %u%F{red}%c%F{reset} %m"
+zstyle ':vcs_info:*' actionformats "(%s|%F{red}%a%F{reset}) %6.6i %F{cyan}%b%F{reset} %u%F{red}%c%F{reset} %m"
 
 ### Dynamically set hgrevformat based on if the local rev is available
 # We don't always know the local revision, e.g. if use-simple is set
