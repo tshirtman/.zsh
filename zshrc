@@ -19,23 +19,7 @@ setopt hist_ignore_dups
 setopt hist_expire_dups_first
 setopt correctall
 
-#my aliases
-alias am='alsamixer'
-alias bt='btdownloadcurses --max_upload_rate 10'
-alias grep='grep --color=auto'
-alias ll='ls -l'
-alias ls='ls --classify --tabsize=0 --literal --color=auto --show-control-chars --human-readable'
-alias ls='ls --color=auto'
-alias mpf='mplayer /tmp/F*'
-alias mpf='mplayer /tmp/F*'
-alias mplayer='mplayer -vo x11 -zoom'
-alias ngrep='grep -n'
-alias sc='screen'
-alias sr='sc -r'
-alias sx='sc -x'
-alias virc='vim ~/.vimrc'
-alias vis='vim -S'
-alias f='find -name'
+source zshrc_aliases
 
 # files associations
 alias -s pdf="evince"
