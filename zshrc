@@ -148,7 +148,7 @@ function +vi-git-stash() {
 
 ### Display the existence of files not yet known to VCS
 
-### git: Show marker (!) if there are untracked files in repository
+### git: Show marker (?) if there are untracked files in repository
 # Make sure you have added staged to your 'formats':  %c
 zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
 
