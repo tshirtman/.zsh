@@ -19,27 +19,12 @@ setopt hist_ignore_dups
 setopt hist_expire_dups_first
 setopt correctall
 
-source zshrc_aliases
+source ~/.zsh/zshrc_aliases
 
 # files associations
 alias -s pdf="evince"
 
-#vim open files found in search by name in tabs 
-vif(){vim -p $(find -name $1)}
-
-# two aliases to autobuild latex documents
-mylatexpdf(){
-[ $(ls -t |head -n1 |grep ".tex") ] && pdflatex "$1" 2>/dev/null;
-};
-
-myxelatexpdf(){
-[ $(ls -t |head -n1 |grep ".tex") ] && xelatex "$1" 2>/dev/null;
-};
-
-# automate some actions when watch won't cut it
-doer(){
-while true; do $@; sleep 1; done;
-}
+source ~/.zsh/zshrc_functions
 
 # avoid duplicate params completion in cp, mv, rm
 zstyle ':completion:*:rm:*' ignore-line yes

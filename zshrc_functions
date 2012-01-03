@@ -1,0 +1,20 @@
+#some misc convenient functions
+
+#vim open files found in search by name in tabs 
+vif(){vim -p $(find -name $1)}
+
+# two aliases to autobuild latex documents
+mylatexpdf(){
+[ $(ls -t |head -n1 |grep ".tex") ] && pdflatex "$1" 2>/dev/null;
+};
+
+myxelatexpdf(){
+[ $(ls -t |head -n1 |grep ".tex") ] && xelatex "$1" 2>/dev/null;
+};
+
+# automate some actions when watch won't cut it
+doer(){
+while true; do $@; sleep 1; done;
+}
+
+
