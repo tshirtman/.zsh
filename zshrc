@@ -52,11 +52,10 @@ promptinit
 # VCS stuff
 source ~/.zsh/zshrc_vcs_info
 
-
 function set_prompt {
     prompt=""
     prompt+="%(?.. exited %1v
-    )"
+)"
     prompt+="[%T] "
     prompt+="%F{grey}${vcs_info_msg_0_}%F{reset}
 "
