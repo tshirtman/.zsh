@@ -19,3 +19,9 @@ umask 022
 
 export GREP_OPTIONS='--color=auto'
 
+# android dev
+export PATH=$PATH:~/android-sdk-linux_x86/tools:~/android-sdk-linux_x86/platform-tools
+
+# kivy dev
+export KIVYANDROID=~/Kivy-1.0.9-android-b3/
+
