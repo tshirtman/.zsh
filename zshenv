@@ -24,4 +24,7 @@ export PATH=$PATH:~/android-sdk-linux_x86/tools:~/android-sdk-linux_x86/platform
 
 # kivy dev
 export KIVYANDROID=~/python-for-android/dist/default/
-
+export ANDROIDNDKVER=r7
+export ANDROIDNDK=~/android-ndk-r7
+export ANDROIDAPI=14
+export ANDROIDSDK=~/android-sdk-linux_x86
