@@ -69,7 +69,7 @@ function precmd {
    set_prompt
 }
 
-if [ $COLORTERM == "gnome-terminal" ]
+if [ x$COLORTERM == "xgnome-terminal" ]
 then
     export TERM=xterm-256color
 fi
