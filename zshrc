@@ -91,3 +91,5 @@ function ansi_colors {
     done
   done
 }
+
+source ~/.autoenv/activate.sh

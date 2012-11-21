@@ -23,3 +23,13 @@ case $yn in
 	*) echo "please answer yes or no";;
 esac
 done
+
+while true
+do
+read -p "do you want to clone autoenv into $HOME/.autoenv?" yn
+case $yn in
+	[Yy]*) git clone git://github.com/kennethreitz/autoenv.git ~/.autoenv; break;;
+	[Nn]*) break;;
+	*) echo "please answer yes or no";;
+esac
+done
