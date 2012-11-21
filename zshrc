@@ -1,3 +1,7 @@
+# Yeah let's try this!
+set -o vi
+bindkey 'jj' vi-cmd-mode
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=100000
