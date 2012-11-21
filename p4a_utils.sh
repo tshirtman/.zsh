@@ -7,7 +7,7 @@ function lg(){
 function deploy(){
     activity="am start -n $P4A_package/org.renpy.android.PythonActivity -a org.renpy.android.PythonActivity"
     pushd $KIVYANDROID
-    apk=$(ls bin/*.apk -t | grep -v unaligned| tail -n 1)
+    apk=$(ls bin/*.apk -t | grep -v unaligned| head -n 1)
 
     if [ $1 == "adb" ]; then
         adb uninstall $P4A_package
