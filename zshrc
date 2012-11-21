@@ -23,6 +23,11 @@ setopt hist_ignore_dups
 setopt hist_expire_dups_first
 setopt correctall
 
+# fix vim being autocorrected
+alias cp='nocorrect cp '
+alias mv='nocorrect mv '
+alias mkdir='nocorrect mkdir '
+
 source ~/.zsh/zshrc_aliases
 
 # files associations
