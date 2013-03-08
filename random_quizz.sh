@@ -18,5 +18,6 @@ quizz(){
     echo "$a * $b ?"
     read c
   done
-  print "found in $count tries, in $(($(date +%s) - $time)) seconds"
+  echo "found in $count tries, in $(($(date +%s) - $time)) seconds"
+  echo "$a * $b : $count : $(($(date +%s) - $time))" >> ~/.zsh/quizz_scores
 }
