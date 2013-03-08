@@ -72,6 +72,7 @@ function set_prompt {
     prompt+="[%T] "
     prompt+="%F{grey}${vcs_info_msg_0_}%F{reset}
 "
+    prompt+="%F{yellow}${VIRTUAL_ENV##*/}%F{reset}"
     prompt+=" %F{red}%n%F{blue}@%F{green}%U%M%u%f:%~%F{yellow}$%f "
 
     RPROMPT=""
