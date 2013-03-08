@@ -78,9 +78,13 @@ function set_prompt {
     RPROMPT=""
 }
 
+# random quizz
+source ~/.zsh/random_quizz.sh
+
 function precmd {
    vcs_info
    set_prompt
+   random_quizz 100 2
 }
 
 if [ x$COLORTERM == "xgnome-terminal" ]
