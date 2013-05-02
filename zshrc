@@ -81,10 +81,14 @@ function set_prompt {
 # random quizz
 source ~/.zsh/random_quizz.sh
 
+# z.sh
+source ~/.zsh/z.sh
+
 function precmd {
    vcs_info
    set_prompt
    random_quizz 100 2
+   z --add "$(pwd -P)"
 }
 
 if [ x$COLORTERM == "xgnome-terminal" ]
