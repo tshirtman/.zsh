@@ -15,3 +15,5 @@ alias virc='vim ~/.vimrc'
 alias vis='vim -S'
 alias f='find -name'
 alias beep="mplayer /usr/share/sounds/ubuntu/stereo/system-ready.ogg 1>/dev/null 2>/dev/null"
+alias top='htop'
+alias ssh='autossh'

@@ -27,7 +27,6 @@ setopt correctall
 alias cp='nocorrect cp '
 alias mv='nocorrect mv '
 alias mkdir='nocorrect mkdir '
-alias top='htop'
 
 source ~/.zsh/zshrc_aliases
 
