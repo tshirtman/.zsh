@@ -25,3 +25,7 @@ export PATH=$PATH:~/android-sdk-linux_x86/tools:~/android-sdk-linux_x86/platform
 # kivy dev
 export KIVYANDROID=~/python-for-android/dist/default/
 
+# virtualenvwrapper setup
+export WORKON_HOME=~/Envs
+mkdir -p $WORKON_HOME
+source /usr/local/bin/virtualenvwrapper.sh
