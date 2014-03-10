@@ -14,3 +14,5 @@ alias sx='sc -x'
 alias virc='vim ~/.vimrc'
 alias vis='vim -S'
 alias f='find -name'
+alias ssh='autossh'
+alias g="git"
