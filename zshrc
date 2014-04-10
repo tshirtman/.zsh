@@ -61,9 +61,6 @@ promptinit
 # VCS stuff
 source ~/.zsh/zshrc_vcs_info
 
-# python-for-android utils
-source ~/.zsh/p4a_utils.sh
-
 function set_prompt {
     prompt=""
     prompt+="%(?.. exited %1v
