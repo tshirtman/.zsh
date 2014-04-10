@@ -6,7 +6,7 @@ bindkey 'jj' vi-cmd-mode
 HISTFILE=~/.histfile
 HISTSIZE=100000
 SAVEHIST=10000
-setopt appendhistory autocd extendedglob notify
+setopt appendhistory autocd extended_glob notify
 unsetopt beep nomatch
 bindkey -e
 # End of lines configured by zsh-newuser-install
