@@ -30,3 +30,6 @@ export ANDROIDAPI=14
 export ANDROIDSDK=~/android-sdk-linux_x86
 
 source virtualenvwrapper.sh
+export PYENV_ROOT="$HOME/pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
