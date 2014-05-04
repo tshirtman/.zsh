@@ -28,4 +28,4 @@ export KIVYANDROID=~/python-for-android/dist/default/
 # virtualenvwrapper setup
 export WORKON_HOME=~/Envs
 mkdir -p $WORKON_HOME
-source ./.local/lib/python2.7/site-packages/virtualenvwrapper:x
+source ./.local/lib/python2.7/site-packages/virtualenvwrapper
