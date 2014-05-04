@@ -34,3 +34,14 @@ do
 	*) echo "please answer yes or no";;
 esac
 done
+
+while true
+do
+	read -p "do you want to install virtualenvwrapper? (Y/N)" yn
+	case $yn in
+		[Yy]*) pip install --user virtualenvwrapper
+			break;;
+		[Nn]*) break;;
+	*) echo "please answer yes or no";;
+esac
+done
