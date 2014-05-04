@@ -54,13 +54,10 @@ source ~/.zsh/zshrc_vcs_info
 
 function set_prompt {
     prompt=""
-    prompt+="%(?.. exited %1v
-)"
-    prompt+="[%T] "
-    prompt+="%F{grey}${vcs_info_msg_0_}%F{reset}
+    prompt+="[%T]%F{red}%(?.. exited %1v)%F{reset}"
+    prompt+="%F{yellow}${vcs_info_msg_0_}%F{reset}
 "
-    prompt+=" %F{red}%n%F{blue}@%F{green}%U%M%u%f:%~%F{yellow}$%f "
-
+    prompt+="%F{red}%n%F{blue}@%F{green}%U%M%u%f:%~%F{yellow}$%f "
     RPROMPT=""
 }
 
