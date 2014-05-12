@@ -1,4 +1,4 @@
-export PATH="/usr/local/bin:/usr/local/sbin:/bin:/usr/bin:/usr/sbin:/usr/bin/X11:/usr/X11R6/bin:/usr/games:/sbin:$HOME/bin"
+export PATH="/usr/local/bin:/usr/local/sbin:/bin:/usr/bin:/usr/sbin:/usr/bin/X11:/usr/X11R6/bin:/usr/games:/sbin:$HOME/bin:$HOME/.local/bin"
 
 export VISUAL=vim
 export EDITOR=vim
@@ -33,3 +33,8 @@ source virtualenvwrapper.sh
 export PYENV_ROOT="$HOME/pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+# virtualenvwrapper setup
+export WORKON_HOME=~/Envs
+mkdir -p $WORKON_HOME
+source ./.local/lib/python2.7/site-packages/virtualenvwrapper

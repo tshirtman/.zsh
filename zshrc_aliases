@@ -18,3 +18,4 @@ alias beep="mplayer /usr/share/sounds/ubuntu/stereo/system-ready.ogg 1>/dev/null
 alias top='htop'
 alias ssh='autossh'
 alias python='python$(($RANDOM % 2 + 2))'
+alias g="git"
